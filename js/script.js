@@ -66,7 +66,7 @@ const bestSellerProducts = [
         name: "Oud Legacy",
         collection: "Heritage Collection",
         type: "Eau de Parfum",
-        size: "50 ml",
+        size: "100 ml",
         price: 145,
         image: "media/images/products/oud-legacy.webp",
         badge: "Best Seller"
@@ -76,7 +76,7 @@ const bestSellerProducts = [
         name: "Velvet Rose",
         collection: "Heritage Collection",
         type: "Eau de Parfum",
-        size: "50 ml",
+        size: "100 ml",
         price: 140,
         image: "media/images/products/velvet-rose.webp",
         badge: ""
@@ -86,7 +86,7 @@ const bestSellerProducts = [
         name: "Milano Noir",
         collection: "Milano Collection",
         type: "Eau de Parfum",
-        size: "50 ml",
+        size: "100 ml",
         price: 135,
         image: "media/images/products/milano-noir.webp",
         badge: "New"
@@ -96,7 +96,7 @@ const bestSellerProducts = [
         name: "London Bloom",
         collection: "London Collection",
         type: "Eau de Parfum",
-        size: "50 ml",
+        size: "100 ml",
         price: 150,
         image: "media/images/products/london-bloom.webp",
         badge: ""
