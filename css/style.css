@@ -3,21 +3,19 @@
 ========================================= */
 
 :root {
-    --black: #0d0d0d;
-    --charcoal: #0d0d0d;
-    --ivory: #f4f1ec;
-    --cream: #f4f1ec;
-    --white: #ffffff;
-    --gold: #b89c6a;
-    --brown: #6b4e3d;
-    --muted: #6b4e3d;
-    --border: #ded8cf;
+    --colour-black: #0d0d0d;
+    --colour-ivory: #f4f1ec;
+    --colour-white: #ffffff;
+    --colour-gold: #b89c6a;
+    --colour-brown: #6b4e3d;
+    --colour-border: #ded8cf;
 
-    --font-display: "Playfair Display", Georgia, serif;
-    --font-body: "Montserrat", Arial, sans-serif;
+    --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+    --font-body: "Montserrat", Arial, Helvetica, sans-serif;
 
+    --shadow-light: 0 2px 12px rgba(0, 0, 0, 0.06);
+    --transition: 0.3s ease;
     --container: 1500px;
-    --ease: 0.35s ease;
 }
 
 /* Reset */
@@ -34,8 +32,8 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    background: var(--ivory);
-    color: var(--black);
+    background: var(--colour-ivory);
+    color: var(--colour-black);
     font-family: var(--font-body);
     line-height: 1.6;
 }
@@ -65,8 +63,8 @@ button {
 }
 
 ::selection {
-    background: var(--gold);
-    color: var(--black);
+    background: var(--colour-gold);
+    color: var(--colour-black);
 }
 
 /* Accessibility */
@@ -76,10 +74,10 @@ button {
     left: 1rem;
     z-index: 1000;
     padding: 0.8rem 1rem;
-    background: var(--black);
-    color: var(--white);
+    background: var(--colour-black);
+    color: var(--colour-white);
     transform: translateY(-130%);
-    transition: transform var(--ease);
+    transition: transform var(--transition);
 }
 
 .skip-link:focus {
@@ -89,7 +87,7 @@ button {
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
-    outline: 2px solid var(--gold);
+    outline: 2px solid var(--colour-gold);
     outline-offset: 4px;
 }
 
@@ -110,8 +108,8 @@ input:focus-visible {
     display: grid;
     place-items: center;
     padding: 0.45rem 1rem;
-    background: var(--black);
-    color: var(--ivory);
+    background: var(--colour-black);
+    color: var(--colour-ivory);
 }
 
 .announcement-bar p {
@@ -130,7 +128,7 @@ input:focus-visible {
     background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid rgba(13, 13, 13, 0.08);
     backdrop-filter: blur(12px);
-    transition: box-shadow var(--ease), background var(--ease);
+    transition: box-shadow var(--transition), background var(--transition);
 }
 
 .site-header.scrolled {
@@ -157,12 +155,12 @@ input:focus-visible {
 
 .brand-mark {
     margin-bottom: 0.15rem;
-    color: var(--gold);
+    color: var(--colour-gold);
     font-size: 0.72rem;
 }
 
 .brand-name {
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: 1.55rem;
     letter-spacing: 0.32rem;
 }
@@ -192,8 +190,8 @@ input:focus-visible {
 .menu-toggle span {
     width: 23px;
     height: 1px;
-    background: var(--black);
-    transition: transform var(--ease), opacity var(--ease);
+    background: var(--colour-black);
+    transition: transform var(--transition), opacity var(--transition);
 }
 
 .menu-toggle.is-open span:nth-child(1) {
@@ -217,7 +215,7 @@ input:focus-visible {
     display: none;
     margin: 0;
     padding: 2rem 1.5rem;
-    background: var(--ivory);
+    background: var(--colour-ivory);
     list-style: none;
 }
 
@@ -226,20 +224,20 @@ input:focus-visible {
 }
 
 .navigation-menu li {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--colour-border);
 }
 
 .navigation-menu a {
     display: block;
     padding: 1.2rem 0;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: 1.7rem;
 }
 
 .navigation-menu a:hover,
 .navigation-menu a:focus-visible,
 .navigation-menu .active-link {
-    color: var(--gold);
+    color: var(--colour-gold);
 }
 
 .navigation-actions {
@@ -255,11 +253,11 @@ input:focus-visible {
     height: 39px;
     display: grid;
     place-items: center;
-    transition: color var(--ease);
+    transition: color var(--transition);
 }
 
 .icon-link:hover {
-    color: var(--gold);
+    color: var(--colour-gold);
 }
 
 .icon-link svg {
@@ -279,8 +277,8 @@ input:focus-visible {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background: var(--gold);
-    color: var(--black);
+    background: var(--colour-gold);
+    color: var(--colour-black);
     font-size: 0.58rem;
     font-weight: 600;
 }
@@ -289,7 +287,7 @@ input:focus-visible {
 .hero-section {
     display: grid;
     min-height: calc(100vh - 115px);
-    background: var(--ivory);
+    background: var(--colour-ivory);
 }
 
 .hero-content {
@@ -304,7 +302,7 @@ input:focus-visible {
 .hero-eyebrow,
 .section-eyebrow {
     margin: 0 0 1.1rem;
-    color: var(--gold);
+    color: var(--colour-gold);
     font-size: 0.63rem;
     font-weight: 600;
     letter-spacing: 0.2rem;
@@ -314,7 +312,7 @@ input:focus-visible {
 .hero-content h1 {
     max-width: 780px;
     margin: 0 auto 1.6rem;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: clamp(3rem, 12vw, 6.2rem);
     font-weight: 400;
     line-height: 0.98;
@@ -326,14 +324,14 @@ input:focus-visible {
 }
 
 .hero-content h1 em {
-    color: var(--brown);
+    color: var(--colour-brown);
     font-weight: 400;
 }
 
 .hero-description {
     max-width: 520px;
     margin: 0 auto 2rem;
-    color: var(--brown);
+    color: var(--colour-brown);
     font-size: 0.92rem;
     line-height: 1.9;
 }
@@ -351,24 +349,24 @@ input:focus-visible {
     align-items: center;
     justify-content: center;
     padding: 0.9rem 1.7rem;
-    border: 1px solid var(--black);
+    border: 1px solid var(--colour-black);
     cursor: pointer;
     font-size: 0.64rem;
     font-weight: 600;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
-    transition: all var(--ease);
+    transition: all var(--transition);
 }
 
 .button-dark {
-    background: var(--black);
-    color: var(--white);
+    background: var(--colour-black);
+    color: var(--colour-white);
 }
 
 .button-dark:hover {
-    border-color: var(--gold);
-    background: var(--gold);
-    color: var(--black);
+    border-color: var(--colour-gold);
+    background: var(--colour-gold);
+    color: var(--colour-black);
     transform: translateY(-2px);
 }
 
@@ -384,19 +382,19 @@ input:focus-visible {
     font-weight: 600;
     letter-spacing: 0.14rem;
     text-transform: uppercase;
-    transition: color var(--ease), gap var(--ease);
+    transition: color var(--transition), gap var(--transition);
 }
 
 .text-link:hover,
 .editorial-link:hover,
 .overlay-link:hover {
     gap: 1rem;
-    color: var(--gold);
+    color: var(--colour-gold);
 }
 
 .hero-signature {
     margin: 2.8rem 0 0;
-    color: var(--muted);
+    color: var(--colour-brown);
     font-size: 0.55rem;
     letter-spacing: 0.13rem;
     text-transform: uppercase;
@@ -406,7 +404,7 @@ input:focus-visible {
     position: relative;
     min-height: 520px;
     overflow: hidden;
-    background: var(--black);
+    background: var(--colour-black);
 }
 
 .hero-image {
@@ -436,7 +434,7 @@ input:focus-visible {
     z-index: 1;
     display: flex;
     justify-content: space-between;
-    color: var(--white);
+    color: var(--colour-white);
     font-size: 0.55rem;
     letter-spacing: 0.12rem;
     text-transform: uppercase;
@@ -457,7 +455,7 @@ input:focus-visible {
 .our-story-content h2,
 .newsletter-copy h2 {
     margin: 0;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: clamp(2.6rem, 8vw, 4.8rem);
     font-weight: 400;
     line-height: 1.05;
@@ -467,14 +465,14 @@ input:focus-visible {
 .section-description {
     max-width: 600px;
     margin: 1.1rem auto 0;
-    color: var(--brown);
+    color: var(--colour-brown);
     font-size: 0.9rem;
     line-height: 1.8;
 }
 
 /* Collections */
 .featured-collections {
-    background: var(--white);
+    background: var(--colour-white);
 }
 
 .collection-grid {
@@ -488,7 +486,7 @@ input:focus-visible {
     position: relative;
     min-height: 520px;
     overflow: hidden;
-    background: var(--black);
+    background: var(--colour-black);
 }
 
 .collection-image {
@@ -523,19 +521,19 @@ input:focus-visible {
     left: 0;
     z-index: 1;
     padding: 2rem;
-    color: var(--white);
+    color: var(--colour-white);
 }
 
 .card-number {
     margin: 0 0 0.8rem;
-    color: var(--gold);
+    color: var(--colour-gold);
     font-size: 0.6rem;
     letter-spacing: 0.17rem;
 }
 
 .collection-overlay h3 {
     margin: 0 0 0.75rem;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: clamp(2.5rem, 8vw, 4rem);
     font-weight: 400;
 }
@@ -548,12 +546,12 @@ input:focus-visible {
 }
 
 .overlay-link {
-    color: var(--white);
+    color: var(--colour-white);
 }
 
 /* Categories */
 .shop-categories {
-    background: var(--ivory);
+    background: var(--colour-ivory);
 }
 
 .category-grid {
@@ -571,7 +569,7 @@ input:focus-visible {
 .category-image-link {
     display: block;
     overflow: hidden;
-    background: var(--cream);
+    background: var(--colour-ivory);
 }
 
 .category-image {
@@ -592,21 +590,21 @@ input:focus-visible {
 
 .category-index {
     margin: 0 0 0.5rem;
-    color: var(--gold);
+    color: var(--colour-gold);
     font-size: 0.6rem;
     letter-spacing: 0.16rem;
 }
 
 .category-content h3 {
     margin: 0 0 0.65rem;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 400;
 }
 
 .category-content p:not(.category-index) {
     margin: 0 0 1.1rem;
-    color: var(--brown);
+    color: var(--colour-brown);
     font-size: 0.84rem;
     line-height: 1.75;
 }
@@ -616,7 +614,7 @@ input:focus-visible {
     display: grid;
     gap: 3rem;
     align-items: center;
-    background: var(--white);
+    background: var(--colour-white);
 }
 
 .our-story-image-wrapper {
@@ -643,7 +641,7 @@ input:focus-visible {
     bottom: 1rem;
     padding: 0.55rem 0.75rem;
     background: rgba(244,241,236,0.92);
-    color: var(--black);
+    color: var(--colour-black);
     font-size: 0.55rem;
     letter-spacing: 0.13rem;
     text-transform: uppercase;
@@ -658,22 +656,22 @@ input:focus-visible {
 }
 
 .story-lead {
-    color: var(--black) !important;
-    font-family: var(--font-display);
+    color: var(--colour-black) !important;
+    font-family: var(--font-heading);
     font-size: 1.35rem !important;
     line-height: 1.45 !important;
 }
 
 .our-story-content p {
     margin: 0 0 1.25rem;
-    color: var(--brown);
+    color: var(--colour-brown);
     font-size: 0.9rem;
     line-height: 1.9;
 }
 
 /* Best sellers */
 .best-sellers {
-    background: var(--ivory);
+    background: var(--colour-ivory);
 }
 
 .product-grid {
@@ -694,7 +692,7 @@ input:focus-visible {
 .product-media {
     position: relative;
     overflow: hidden;
-    background: var(--white);
+    background: var(--colour-white);
 }
 
 .product-image-link {
@@ -720,7 +718,7 @@ input:focus-visible {
     padding: 0.45rem 0.7rem;
     border: 1px solid rgba(13,13,13,0.2);
     background: rgba(244,241,236,0.94);
-    color: var(--black);
+    color: var(--colour-black);
     font-size: 0.55rem;
     font-weight: 600;
     letter-spacing: 0.13rem;
@@ -737,7 +735,7 @@ input:focus-visible {
 .product-collection {
     grid-column: 1 / -1;
     margin: 0;
-    color: var(--gold);
+    color: var(--colour-gold);
     font-size: 0.58rem;
     font-weight: 600;
     letter-spacing: 0.13rem;
@@ -746,18 +744,18 @@ input:focus-visible {
 
 .product-content h3 {
     margin: 0;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: 1.45rem;
     font-weight: 400;
 }
 
 .product-name-link:hover {
-    color: var(--gold);
+    color: var(--colour-gold);
 }
 
 .product-price {
     margin: 0;
-    color: var(--brown);
+    color: var(--colour-brown);
     font-size: 0.82rem;
     font-weight: 600;
 }
@@ -765,7 +763,7 @@ input:focus-visible {
 .product-meta {
     grid-column: 1 / -1;
     margin: 0.1rem 0 0;
-    color: var(--muted);
+    color: var(--colour-brown);
     font-size: 0.7rem;
 }
 
@@ -774,22 +772,22 @@ input:focus-visible {
     width: 100%;
     min-height: 45px;
     margin-top: 0.7rem;
-    border: 1px solid var(--black);
+    border: 1px solid var(--colour-black);
     background: transparent;
-    color: var(--black);
+    color: var(--colour-black);
     cursor: pointer;
     font-size: 0.6rem;
     font-weight: 600;
     letter-spacing: 0.14rem;
     text-transform: uppercase;
-    transition: background var(--ease), color var(--ease), border-color var(--ease);
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
 .add-cart-button:hover,
 .add-cart-button:focus-visible {
-    border-color: var(--black);
-    background: var(--black);
-    color: var(--white);
+    border-color: var(--colour-black);
+    background: var(--colour-black);
+    color: var(--colour-white);
 }
 
 .add-cart-button:disabled {
@@ -808,7 +806,7 @@ input:focus-visible {
     background:
         linear-gradient(rgba(13,13,13,0.91), rgba(13,13,13,0.91)),
         url("../media/images/hero/hero-perfume.webp") center / cover;
-    color: var(--white);
+    color: var(--colour-white);
 }
 
 .newsletter-inner {
@@ -823,7 +821,7 @@ input:focus-visible {
 }
 
 .newsletter-copy h2 {
-    color: var(--white);
+    color: var(--colour-white);
 }
 
 .newsletter-copy p:last-child {
@@ -849,7 +847,7 @@ input:focus-visible {
     padding: 1rem 0;
     border: 0;
     background: transparent;
-    color: var(--white);
+    color: var(--colour-white);
     outline: 0;
 }
 
@@ -862,7 +860,7 @@ input:focus-visible {
     padding: 0.7rem 0 0.7rem 1rem;
     border: 0;
     background: transparent;
-    color: var(--gold);
+    color: var(--colour-gold);
     cursor: pointer;
     font-size: 0.6rem;
     font-weight: 600;
@@ -880,8 +878,8 @@ input:focus-visible {
 /* Footer */
 .site-footer {
     padding: 4.5rem 1.5rem 1.5rem;
-    background: var(--black);
-    color: var(--white);
+    background: var(--colour-black);
+    color: var(--colour-white);
 }
 
 .footer-grid {
@@ -906,7 +904,7 @@ input:focus-visible {
 
 .footer-heading {
     margin: 0 0 1rem;
-    color: var(--gold);
+    color: var(--colour-gold);
     font-size: 0.62rem;
     font-weight: 600;
     letter-spacing: 0.16rem;
@@ -926,11 +924,11 @@ input:focus-visible {
 .footer-column a {
     color: rgba(255,255,255,0.67);
     font-size: 0.78rem;
-    transition: color var(--ease);
+    transition: color var(--transition);
 }
 
 .footer-column a:hover {
-    color: var(--gold);
+    color: var(--colour-gold);
 }
 
 .footer-bottom {
@@ -1068,10 +1066,10 @@ input:focus-visible {
         bottom: 0;
         left: 0;
         height: 1px;
-        background: var(--gold);
+        background: var(--colour-gold);
         content: "";
         transform: scaleX(0);
-        transition: transform var(--ease);
+        transition: transform var(--transition);
     }
 
     .navigation-menu a:hover::after,
@@ -1135,3 +1133,4 @@ input:focus-visible {
         transform: none;
     }
 }
+
